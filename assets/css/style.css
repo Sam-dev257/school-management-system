@@ -1,0 +1,553 @@
+/*================================================*/
+/*==== CSS RESET ================================*/
+/*================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*================================================*/
+/*==== BODY ======================================*/
+/*================================================*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+/*================================================*/
+/*==== CONTAINER ================================*/
+/*================================================*/
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR ===================================*/
+/*================================================*/
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #6866da;
+    color: white;
+    border: 2px solid rgb(16, 1, 49);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/*================================================*/
+/*==== MAIN CONTENT ==============================*/
+/*================================================*/
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+
+/*================================================*/
+/*==== MAIN TITLE ================================*/
+/*================================================*/
+
+.main-content h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+/*================================================*/
+/*==== FORM ======================================*/
+/*================================================*/
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/*================================================*/
+/*==== FORM SECTION ==============================*/
+/*================================================*/
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+
+/*================================================*/
+/*==== SECTION TITLE =============================*/
+/*================================================*/
+
+.form-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #6866da;
+}
+
+
+/*================================================*/
+/*==== SUBSECTION TITLE ==========================*/
+/*================================================*/
+
+.form-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+
+/*================================================*/
+/*==== FORM GRID =================================*/
+/*================================================*/
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/*================================================*/
+/*==== SECTION TITLE FULL WIDTH ==================*/
+/*================================================*/
+
+.form-section h2,
+.form-section h3 {
+    grid-column: 1 / -1;
+}
+
+
+/*================================================*/
+/*==== FORM GROUP ================================*/
+/*================================================*/
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    min-width: 0;
+}
+
+
+/*================================================*/
+/*==== LABEL =====================================*/
+/*================================================*/
+
+.form-group label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/*================================================*/
+/*==== FORM CONTROLS =============================*/
+/*================================================*/
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+
+/*================================================*/
+/*==== TEXTAREA ==================================*/
+/*================================================*/
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/*================================================*/
+/*==== FORM FOCUS ================================*/
+/*================================================*/
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6866da;
+}
+
+
+/*================================================*/
+/*==== FILE INPUT ================================*/
+/*================================================*/
+
+.form-group input[type="file"] {
+    padding: 8px;
+}
+
+
+/*================================================*/
+/*==== SECTION ACTIONS ===========================*/
+/*================================================*/
+
+.section-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+
+/*================================================*/
+/*==== NEXT / PREVIOUS BUTTONS ===================*/
+/*================================================*/
+
+.btn-next,
+.btn-prev {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/*================================================*/
+/*==== NEXT BUTTON ===============================*/
+/*================================================*/
+
+.btn-next {
+    background-color: #6866da;
+    color: white;
+}
+
+
+/*================================================*/
+/*==== PREVIOUS BUTTON ===========================*/
+/*================================================*/
+
+.btn-prev {
+    background-color: #ddd;
+    color: #333;
+}
+
+
+/*================================================*/
+/*==== SUBMIT BUTTON =============================*/
+/*================================================*/
+
+.btn-submit {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6866da;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/*================================================*/
+/*==== BUTTON HOVER ==============================*/
+/*================================================*/
+
+.btn-next:hover {
+    background-color: #5553c7;
+}
+
+.btn-prev:hover {
+    background-color: #c8c8c8;
+}
+
+.btn-submit:hover {
+    background-color: #5553c7;
+}
+
+
+/*================================================*/
+/*==== FORM ACTIONS ==============================*/
+/*================================================*/
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/*================================================*/
+/*==== FORM ACTION BUTTONS =======================*/
+/*================================================*/
+
+.form-actions button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR NAV ===============================*/
+/*================================================*/
+
+.sidebar nav {
+    width: 100%;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR LIST ==============================*/
+/*================================================*/
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR ITEM ==============================*/
+/*================================================*/
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR LINKS =============================*/
+/*================================================*/
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+
+/*================================================*/
+/*==== SIDEBAR LINK HOVER ========================*/
+/*================================================*/
+
+.sidebar a:hover {
+    background-color: #5553c7;
+}
+
+
+/*================================================*/
+/*==== ACTIVE SIDEBAR LINK =======================*/
+/*================================================*/
+
+.sidebar a.active {
+    background-color: #5553c7;
+}
+
+
+/*================================================*/
+/*==== RESPONSIVE DESIGN =========================*/
+/*================================================*/
+
+@media (max-width: 1000px) {
+
+    .form-section.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*================================================*/
+/*==== TABLET / MOBILE ==========================*/
+/*================================================*/
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-section.active {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content h1 {
+        font-size: 26px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .section-actions {
+        flex-direction: row;
+    }
+
+    .btn-next,
+    .btn-prev,
+    .btn-submit {
+        width: auto;
+    }
+}
+
+
+/*================================================*/
+/*==== SMALL MOBILE ==============================*/
+/*================================================*/
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group label {
+        white-space: normal;
+    }
+
+    .section-actions {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .btn-next,
+    .btn-prev,
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+/*==== STUDENT PHOTO ====*/
+.student-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.student-photo label {
+    font-weight: bold;
+}
+
+.photo-preview {
+    width: 160px;
+    height: 180px;
+
+    border: 2px dashed #6866da;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*==== STUDENT PHOTO + QR CODE ====*/
+
+.student-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+/*==== QR CODE ====*/
+
+.student-qrcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.student-qrcode label {
+    font-weight: bold;
+}
+
+#qrCode {
+    width: 160px;
+    height: 180px;
+
+    border: 2px dashed #6866da;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+}
+

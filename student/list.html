@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Liste des élèves"
+    >
+
+    <meta
+        name="author"
+        content="Jeudi Samuel"
+    >
+
+    <title>Liste des élèves</title>
+
+
+    <link
+        rel="icon"
+        href="../assets/images/logo.jpg"
+    >
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/list.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!--==== SIDEBAR ====-->
+
+        <aside class="sidebar">
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="registration.html">
+                            Enregistrer un élève
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="list.html" class="active">
+                            Liste des élèves
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+
+        <!--==== MAIN CONTENT ====-->
+
+        <main class="main-content">
+
+            <h1>Liste des élèves</h1>
+
+
+            <!--==== STUDENT LIST ====-->
+
+            <section class="student-list">
+
+                <h2>Élèves enregistrés</h2>
+
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID étudiant</th>
+
+                            <th>Prénom</th>
+
+                            <th>Nom</th>
+
+                            <th>Classe</th>
+
+                            <th>Année académique</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentList">
+
+                        <!-- Les élèves seront affichés ici -->
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+                            <!--==== VIEW STUDENT MODAL ====-->
+
+                <div id="studentModal" class="student-modal">
+
+                    <div class="student-modal-content">
+
+                        <button
+                            type="button"
+                            id="closeModal"
+                            class="close-modal"
+                        >
+                            ×
+                        </button>
+
+                        <h2>Informations de l'élève</h2>
+
+                        <div id="studentDetails">
+
+                            <!-- Les informations de l'élève seront affichées ici -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../assets/js/list.js"></script>
+
+</body>
+
+</html>

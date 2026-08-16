@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="School Management System">
+    <meta name="author" content="Jeudi Samuel">
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/logo.jpg">
+</head>
+
+<body>
+            <!-- Sidebar -->
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="registration.html">Student Registration</a>
+                    </li>
+
+                    <li>
+                        <a href="list.html">
+                            Student List
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <h1>Enregistrer un élève</h1>
+
+            <form id="studentForm">
+
+                <!--==== SECTION 1 ====-->
+                <section class="form-section active">
+
+                    <h2>Information Personnelle</h2>
+
+                    <h3>Identité de l'élève</h3>
+
+                    <div class="form-group">
+                        <label for="first_name">Prénom :</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Nom :</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date_of_birth">Date de naissance :</label>
+                        <input type="date" id="date_of_birth" name="date_of_birth">
+                    </div>
+
+                    <!-- Bouton -->
+                    <div class="section-actions">
+                        <button type="button" class="btn-next">
+                            Suivant →
+                        </button>
+                    </div>
+
+                </section>
+
+
+                <!--==== SECTION 2 ====-->
+                <section class="form-section">
+
+                    <h2>Informations Académiques</h2>
+
+                    <div class="form-group">
+                        <label for="academic_year">Année académique :</label>
+                        <select id="academic_year" name="academic_year">
+                            <option value="">Sélectionner</option>
+                            <option value="2025-2026">2025-2026</option>
+                            <option value="2026-2027">2026-2027</option>
+                            <option value="2027-2028">2027-2028</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grade">Classe :</label>
+                        <select id="grade" name="grade">
+                            <option value="">Sélectionner</option>
+                            <option value="1ere">1ère année</option>
+                            <option value="2eme">2ème année</option>
+                            <option value="3eme">3ème année</option>
+                            <option value="4eme">4ème année</option>
+                            <option value="5eme">5ème année</option>
+                            <option value="6eme">6ème année</option>
+                            <option value="7eme">7ème année</option>
+                            <option value="8eme">8ème année</option>
+                            <option value="9eme">9ème année</option>
+                            <option value="NS1">NS1</option>
+                            <option value="NS2">NS2</option>
+                            <option value="NS3">NS3</option>
+                            <option value="NS4">NS4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enrollment_date">Date d'inscription :</label>
+                        <input type="date" id="enrollment_date" name="enrollment_date">
+                    </div>
+
+                    <!-- Boutons -->
+                    <div class="section-actions">
+
+                        <button type="button" class="btn-prev">
+                            ← Précédent
+                        </button>
+
+                        <button type="button" class="btn-next">
+                            Suivant →
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!--==== SECTION 3 ====-->
+                <section class="form-section">
+
+                    <h2>Parents et Responsable</h2>
+
+                    <div class="form-group">
+                        <label for="parents_marital_status">
+                            Situation familiale :
+                        </label>
+
+                        <select id="parents_marital_status"
+                                name="parents_marital_status">
+
+                            <option value="">Sélectionner</option>
+                            <option value="married">Mariés</option>
+                            <option value="divorced">Divorcés</option>
+                            <option value="separated">Séparés</option>
+                            <option value="widowed">Veuf / Veuve</option>
+                            <option value="single">Célibataire</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_first_name">
+                            Prénom de la mère :
+                        </label>
+
+                        <input type="text"
+                            id="mother_first_name"
+                            name="mother_first_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_first_name">
+                            Prénom du père :
+                        </label>
+
+                        <input type="text"
+                            id="father_first_name"
+                            name="father_first_name">
+                    </div>
+
+                    <!-- Boutons -->
+                    <div class="section-actions">
+
+                        <button type="button" class="btn-prev">
+                            ← Précédent
+                        </button>
+
+                        <button type="button" class="btn-next">
+                            Suivant →
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!--==== SECTION 4 ====-->
+                <section class="form-section">
+
+                    <h2>Paiement des frais d'inscription</h2>
+
+                    <div class="form-group">
+                        <label for="registration_fee">
+                            Frais d'inscription :
+                        </label>
+
+                        <input type="number"
+                            id="registration_fee"
+                            name="registration_fee">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment_method">
+                            Mode de paiement :
+                        </label>
+
+                        <select id="payment_method"
+                                name="payment_method">
+
+                            <option value="">Sélectionner</option>
+                            <option value="cash">Espèces</option>
+                            <option value="bank">Virement bancaire</option>
+                            <option value="check">Chèque</option>
+
+                        </select>
+                    </div>
+
+                    <!-- Boutons -->
+                    <div class="section-actions">
+
+                        <button type="button" class="btn-prev">
+                            ← Précédent
+                        </button>
+
+                        <button type="submit" class="btn-submit">
+                            Enregistrer
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </form>
+
+        </main>
+
+    </div>
+
+     <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!--Premier egzanp lan-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="School Management System">
+    <meta name="author" content="Jeudi Samuel">
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/logo.jpg">
+</head>
+
+<body>
+            <!-- Sidebar -->
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="registration.html">Student Registration</a>
+                    </li>
+
+                    <li>
+                        <a href="list.html">
+                            Student List
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <h1>Enregistrer un élève</h1>
+
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <!-- Information personnelle -->
+
+                <section>
+
+                    <h2>Information Personnelle</h2>
+                    <h3>Identité de l'élève</h3>
+
+                    <div class="form-group">
+                        <label for="student_id">Numéro d'étudiant:</label>
+                        <input 
+                            type="text"
+                            id="student_id"
+                            name="student_id"
+                            placeholder="Saisissez le numéro d'étudiant"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first_name">Prénom</label>
+                        <input 
+                            type="text"
+                            id="first_name"
+                            name="first_name"
+                            placeholder="Saisissez le prénom"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Nom:</label>
+                        <input 
+                            type="text"
+                            id="last_name"
+                            name="last_name"
+                            placeholder="saississez le nom"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date_of_birth">Date de naissance:</label>
+                        <input
+                            type="date"
+                            id="date_of_birth"
+                            name="date_of_birth"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="place_of_birth">Lieu de naissance:</label>
+                        <input
+                            type="text"
+                            id="place_of_birth"
+                            name="place_of_birth"
+                            placeholder="Saisissez le lieu de naissance"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Sexe:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Sélectionnez le sexe</option>            
+                            <option value="male">Masculin</option>
+                            <option value="female">Féminin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationality">Nationalité:</label>
+                        <input
+                            type="text"
+                            id="nationality"
+                            name="nationality"
+                            placeholder="Saisissez la nationalité"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student_photo">Photo de l'élève:</label>
+                            <input
+                                type="file"
+                                id="student_photo"
+                                name="student_photo"
+                                accept="image/*"
+                            >
+                    </div>
+
+                             <!-- Coordonnées -->
+
+                    <h3>Coordonnées</h3>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone:</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Saisissez le numéro de téléphone"
+                                required
+                            >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Saisissez l'adresse e-mail"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Adresse:</label>
+                        <textarea
+                            id="address"
+                            name="address"
+                            placeholder="Saisissez l'adresse"
+                            rows="3"
+                            required>
+                        </textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Ville:</label>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Saisissez la ville"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">État / Province:</label>
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder="Saisissez l'État ou la Province"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal_code">Code postal:</label>
+                        <input
+                            type="text"
+                            id="postal_code"
+                            name="postal_code"
+                            placeholder="Saisissez le code postal"
+                        >
+                    </div>
+
+                
+                            <!-- Informations complémentaires -->
+
+                    <h3>Informations complémentaires</h3>
+
+                    <div class="form-group">
+
+                        <label for="blood_type">Groupe sanguin:</label>
+                        <select id="blood_type" name="blood_type">
+                            <option value="">Sélectionnez le groupe sanguin</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_school">École précédente:</label>
+                        <input
+                            type="text"
+                            id="previous_school"
+                            name="previous_school"
+                            placeholder="Saisissez le nom de l'école précédente"
+                        >
+                    </div>
+
+                </section>
+
+                 <!--INFORMATION ACADEMIQUE-->
+
+                <section>
+
+                    <h2>Informations Académiques</h2>
+
+                    <h3>Scolarité de l'élève</h3>
+
+                    <div class="form-group">
+                        <label for="academic_year">Année scolaire:</label>
+
+                        <select
+                            id="academic_year"
+                            name="academic_year"
+                            required>
+
+                            <option value="">Sélectionnez l'année scolaire</option>
+                            <option value="2025-2026">2025-2026</option>
+                            <option value="2026-2027">2026-2027</option>
+                            <option value="2027-2028">2027-2028</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grade">Classe:</label>
+
+                        <select
+                            id="grade"
+                            name="grade"
+                            required>
+
+                            <option value="">Sélectionnez la classe</option>
+                            <option value="petite_section_ps">Petite Section (PS)</option>
+                            <option value="moyenne_section_ms">Moyenne Section (MS)</option>
+                            <option value="grande_section_gs">Grande Section (GS)</option>
+                            <option value="1e">1è année</option>
+                            <option value="2eme">2ème année</option>
+                            <option value="3eme">3ème année</option>
+                            <option value="4eme">4ème année</option>
+                            <option value="5eme">5ème année</option>
+                            <option value="6eme">6ème année</option>
+                            <option value="7eme">7ème année</option>
+                            <option value="8eme">8ème année</option>
+                            <option value="9eme">9ème année</option>
+                            <option value="NS1">NS1</option>
+                            <option value="NS2">NS2</option>
+                            <option value="NS3">NS3</option>
+                            <option value="NS4">NS4</option>
+
+                        </select>
+                    </div>
+
+                    
+<!--Niveau Etudes-->
+                    <div class="form-group">
+                        <label for="level">Niveau:</label>
+
+                        <select
+                            id="level"
+                            name="level"
+                            required>
+
+                            <option value="">Sélectionnez le niveau</option>
+                            <option value="fondamental_1">Fondamentale 1</option>
+                            <option value="fondamental_2">Fondamentale 2</option>
+                            <option value="fondamental_3">Fondamentale 3</option>
+                            <option value="prescolaire">Préscolaire</option>
+                            <option value="secondaire">Secondaire</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enrollment_date">Date d'inscription:</label>
+
+                        <input
+                            type="date"
+                            id="enrollment_date"
+                            name="enrollment_date"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enrollment_type">Type d'inscription:</label>
+
+                        <select
+                            id="enrollment_type"
+                            name="enrollment_type"
+                            required>
+
+                            <option value="">Sélectionnez le type d'inscription</option>
+                            <option value="new">Nouvelle inscription</option>
+                            <option value="transfer">Transfert</option>
+                            <option value="returning">Ancien élève</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_average">Moyenne précédente:</label>
+
+                        <input
+                            type="number"
+                            id="previous_average"
+                            name="previous_average"
+                            placeholder="Saisissez la moyenne précédente"
+                            min="0"
+                            max="100"
+                            step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student_status">Statut de l'élève:</label>
+
+                        <select
+                            id="student_status"
+                            name="student_status"
+                            required>
+
+                            <option value="">Sélectionnez le statut</option>
+                            <option value="active">Actif</option>
+                            <option value="inactive">Inactif</option>
+                            <option value="transferred">Transféré</option>
+                            <option value="graduated">Diplômé</option>
+
+                        </select>
+                    </div>
+
+                </section>
+
+                <!--INFORMATION PARENTS-->
+
+                <section>
+
+                    <h2>Informations Parents</h2>
+
+                    <h3>Informations générales</h3>
+
+                    <div class="form-group">
+                        <label for="parents_marital_status">Situation matrimoniale des parents:</label>
+
+                        <select
+                            id="parents_marital_status"
+                            name="parents_marital_status">
+
+                            <option value="">Sélectionnez la situation matrimoniale</option>
+                            <option value="married">Mariés</option>
+                            <option value="divorced">Divorcés</option>
+                            <option value="separated">Séparés</option>
+                            <option value="widowed">Veuf / Veuve</option>
+                            <option value="single">Célibataire</option>
+                        </select>
+                    </div>
+                </section>
+             
+                <!--INFORMATION DE LA MERE-->
+        
+                <section>
+
+                    <h3>Informations de la mère</h3>
+
+                    <div class="form-group">
+                        <label for="mother_first_name">Prénom:</label>
+
+                        <input
+                            type="text"
+                            id="mother_first_name"
+                            name="mother_first_name"
+                            placeholder="Saisissez le prénom de la mère"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_last_name">Nom:</label>
+
+                        <input
+                            type="text"
+                            id="mother_last_name"
+                            name="mother_last_name"
+                            placeholder="Saisissez le nom de la mère"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_phone">Numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="mother_phone"
+                            name="mother_phone"
+                            placeholder="Saisissez le numéro de téléphone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mothe_secondary_phone">Second Numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="mother_secondary_phone"
+                            name="mother_secondary_phone"
+                            placeholder="Saisissez le second numéro de téléphone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_email">Adresse e-mail:</label>
+
+                        <input
+                            type="email"
+                            id="mother_email"
+                            name="mother_email"
+                            placeholder="Saisissez l'adresse e-mail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_occupation">Profession de votre mère:</label>
+
+                        <select
+                            id="mother_occupation"
+                            name="mother_occupation">
+
+                            <option value="">Sélectionnez la profession de votre mère</option>
+
+                            <option value="teacher">Enseignante</option>
+                            <option value="professor">Professeure</option>
+                            <option value="doctor">Médecin</option>
+                            <option value="nurse">Infirmière</option>
+                            <option value="midwife">Sage-femme</option>
+                            <option value="pharmacist">Pharmacienne</option>
+                            <option value="dentist">Dentiste</option>
+                            <option value="laboratory_technician">Technicienne de laboratoire</option>
+
+                            <option value="lawyer">Avocate</option>
+                            <option value="judge">Juge</option>
+                            <option value="police_officer">Policière</option>
+                            <option value="social_worker">Travailleuse sociale</option>
+
+                            <option value="accountant">Comptable</option>
+                            <option value="banker">Banquière</option>
+                            <option value="cashier">Caissière</option>
+                            <option value="secretary">Secrétaire</option>
+                            <option value="administrative_assistant">Assistante administrative</option>
+                            <option value="manager">Gestionnaire</option>
+                            <option value="business_owner">Propriétaire d'entreprise</option>
+                            <option value="entrepreneur">Entrepreneure</option>
+
+                            <option value="engineer">Ingénieure</option>
+                            <option value="architect">Architecte</option>
+                            <option value="computer_scientist">Informaticienne</option>
+                            <option value="software_developer">Développeuse informatique</option>
+                            <option value="technician">Technicienne</option>
+                            <option value="electrician">Électricienne</option>
+                            <option value="mechanic">Mécanicienne</option>
+
+                            <option value="journalist">Journaliste</option>
+                            <option value="writer">Écrivaine</option>
+                            <option value="translator">Traductrice</option>
+                            <option value="designer">Designer</option>
+                            <option value="photographer">Photographe</option>
+
+                            <option value="salesperson">Vendeuse</option>
+                            <option value="marketing_specialist">Spécialiste en marketing</option>
+                            <option value="customer_service">Agente de service à la clientèle</option>
+                            <option value="real_estate_agent">Agente immobilière</option>
+
+                            <option value="farmer">Agricultrice</option>
+                            <option value="fisher">Pêcheuse</option>
+                            <option value="livestock_farmer">Éleveuse</option>
+
+                            <option value="cook">Cuisinière</option>
+                            <option value="chef">Cheffe cuisinière</option>
+                            <option value="baker">Boulangère</option>
+                            <option value="tailor">Couturière</option>
+                            <option value="hairdresser">Coiffeuse</option>
+                            <option value="beautician">Esthéticienne</option>
+
+                            <option value="driver">Chauffeuse</option>
+                            <option value="pilot">Pilote</option>
+                            <option value="flight_attendant">Agente de bord</option>
+
+                            <option value="religious_worker">Travailleuse religieuse</option>
+                            <option value="civil_servant">Fonctionnaire</option>
+                            <option value="government_employee">Employée du gouvernement</option>
+                            <option value="military">Militaire</option>
+
+                            <option value="homemaker">Femme au foyer</option>
+                            <option value="student">Étudiante</option>
+                            <option value="retired">Retraitée</option>
+                            <option value="unemployed">Sans emploi</option>
+
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_address">Adresse:</label>
+
+                        <textarea
+                            id="mother_address"
+                            name="mother_address"
+                            placeholder="Saisissez l'adresse de la mère"
+                            rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_city">Ville:</label>
+
+                        <input
+                            type="text"
+                            id="mother_city"
+                            name="mother_city"
+                            placeholder="Saisissez la ville">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mother_relationship">Lien avec l'élève:</label>
+
+                        <select
+                            id="mother_relationship"
+                            name="mother_relationship">
+
+                            <option value="">Sélectionnez le lien</option>
+                            <option value="mother">Mère biologique</option>
+                            <option value="stepmother">Belle-mère</option>
+                            <option value="guardian">Tutrice</option>
+
+                        </select>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="mother_status">Status de la mère:</label>
+
+                        <select
+                            id="mother_status"
+                            name="mother_status">
+
+                            <option value="">Sélectionnez le status de votre mère</option>
+                            <option value="alive">Vivante</option>
+                            <option value="deceased">Décédée</option>
+
+                        </select>
+                    </div>
+
+                </section>
+
+                 <!--INFORMATION DU PERE-->
+        
+                <section>
+
+                    <h3>Informations du père</h3>
+
+                    <div class="form-group">
+                        <label for="father_first_name">Prénom:</label>
+
+                        <input
+                            type="text"
+                            id="father_first_name"
+                            name="father_first_name"
+                            placeholder="Saisissez le prénom du père"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_last_name">Nom:</label>
+
+                        <input
+                            type="text"
+                            id="father_last_name"
+                            name="father_last_name"
+                            placeholder="Saisissez le nom du père"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_phone">Numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="father_phone"
+                            name="father_phone"
+                            placeholder="Saisissez le numéro de téléphone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_secondary_phone">Second Numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="father_secondary_phone"
+                            name="father_secondary_phone"
+                            placeholder="Saisissez le second numéro de téléphone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_email">Adresse e-mail:</label>
+
+                        <input
+                            type="email"
+                            id="father_email"
+                            name="father_email"
+                            placeholder="Saisissez l'adresse e-mail">
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="father_occupation">Profession de votre père:</label>
+
+                        <select
+                            id="father_occupation"
+                            name="father_occupation">
+
+                            <option value="">Sélectionnez la profession de votre père</option>
+
+                            <option value="teacher">Enseignant</option>
+                            <option value="professor">Professeur</option>
+                            <option value="doctor">Médecin</option>
+                            <option value="nurse">Infirmier</option>
+                            <option value="pharmacist">Pharmacien</option>
+                            <option value="dentist">Dentiste</option>
+                            <option value="engineer">Ingénieur</option>
+                            <option value="architect">Architecte</option>
+                            <option value="technician">Technicien</option>
+                            <option value="electrician">Électricien</option>
+                            <option value="mechanic">Mécanicien</option>
+                            <option value="plumber">Plombier</option>
+                            <option value="carpenter">Charpentier</option>
+                            <option value="welder">Soudeur</option>
+
+                            <option value="lawyer">Avocat</option>
+                            <option value="judge">Juge</option>
+                            <option value="police_officer">Policier</option>
+                            <option value="soldier">Militaire</option>
+                            <option value="firefighter">Pompier</option>
+
+                            <option value="accountant">Comptable</option>
+                            <option value="banker">Banquier</option>
+                            <option value="manager">Gestionnaire</option>
+                            <option value="business_owner">Propriétaire d'entreprise</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                            <option value="salesperson">Vendeur</option>
+                            <option value="cashier">Caissier</option>
+                            <option value="real_estate_agent">Agent immobilier</option>
+
+                            <option value="computer_scientist">Informaticien</option>
+                            <option value="software_developer">Développeur informatique</option>
+                            <option value="web_developer">Développeur web</option>
+                            <option value="network_administrator">Administrateur réseau</option>
+                            <option value="it_specialist">Spécialiste en informatique</option>
+                            <option value="journalist">Journaliste</option>
+                            <option value="writer">Écrivain</option>
+                            <option value="photographer">Photographe</option>
+                            <option value="designer">Designer</option>
+                            <option value="farmer">Agriculteur</option>
+                            <option value="fisherman">Pêcheur</option>
+                            <option value="livestock_farmer">Éleveur</option>
+                            <option value="driver">Chauffeur</option>
+                            <option value="truck_driver">Chauffeur de camion</option>
+                            <option value="taxi_driver">Chauffeur de taxi</option>
+                            <option value="pilot">Pilote</option>
+                            <option value="chef">Chef cuisinier</option>
+                            <option value="cook">Cuisinier</option>
+                            <option value="baker">Boulanger</option>
+                            <option value="construction_worker">Ouvrier du bâtiment</option>
+                            <option value="contractor">Entrepreneur en construction</option>
+                            <option value="mason">Maçon</option>
+                            <option value="painter">Peintre en bâtiment</option>
+                            <option value="civil_servant">Fonctionnaire</option>
+                            <option value="government_employee">Employé du gouvernement</option>
+                            <option value="religious_worker">Travailleur religieux</option>
+                            <option value="businessman">Homme d'affaires</option>
+                            <option value="trader">Commerçant</option>
+                            <option value="merchant">Marchand</option>
+                            <option value="security_guard">Agent de sécurité</option>
+                            <option value="security_officer">Responsable de sécurité</option>
+                            <option value="university_student">Étudiant</option>
+                            <option value="retired">Retraité</option>
+                            <option value="unemployed">Sans emploi</option>
+                            <option value="other">Autre</option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+                    <!--INFORMATION DE LA PERSONNE RESPONSABLE-->
+
+                <section>
+
+                    <h3>Informations de la personne responsable</h3>
+
+                    <div class="form-group">
+                        <label for="guardian_first_name">Prénom:</label>
+
+                        <input
+                            type="text"
+                            id="guardian_first_name"
+                            name="guardian_first_name"
+                            placeholder="Saisissez le prénom"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_last_name">Nom:</label>
+
+                        <input
+                            type="text"
+                            id="guardian_last_name"
+                            name="guardian_last_name"
+                            placeholder="Saisissez le nom"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_relationship">Lien avec l'élève:</label>
+
+                        <select
+                            id="guardian_relationship"
+                            name="guardian_relationship"
+                            required>
+
+                            <option value="">Sélectionnez le lien avec l'élève</option>
+                            <option value="mother">Mère</option>
+                            <option value="father">Père</option>
+                            <option value="grandmother">Grand-mère</option>
+                            <option value="grandfather">Grand-père</option>
+                            <option value="aunt">Tante</option>
+                            <option value="uncle">Oncle</option>
+                            <option value="sister">Sœur</option>
+                            <option value="brother">Frère</option>
+                            <option value="stepmother">Belle-mère</option>
+                            <option value="stepfather">Beau-père</option>
+                            <option value="legal_guardian">Tuteur / Tutrice légal(e)</option>
+                            <option value="other">Autre</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_phone">Numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="guardian_phone"
+                            name="guardian_phone"
+                            placeholder="Saisissez le numéro de téléphone"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_secondary_phone">Second numéro de téléphone:</label>
+
+                        <input
+                            type="tel"
+                            id="guardian_secondary_phone"
+                            name="guardian_secondary_phone"
+                            placeholder="Saisissez le numéro de téléphone"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_email">Adresse e-mail:</label>
+
+                        <input
+                            type="email"
+                            id="guardian_email"
+                            name="guardian_email"
+                            placeholder="Saisissez l'adresse e-mail">
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="guardian_occupation">Profession de la personne responsable:</label>
+
+                        <select
+                            id="guardian_occupation"
+                            name="guardian_occupation">
+
+                            <option value="">Sélectionnez la profession de la personne responsable</option>
+                            <option value="teacher">Enseignant(e)</option>
+                            <option value="doctor">Médecin</option>
+                            <option value="nurse">Infirmier(ère)</option>
+                            <option value="pharmacist">Pharmacien(ne)</option>
+                            <option value="lawyer">Avocat(e)</option>
+                            <option value="engineer">Ingénieur(e)</option>
+                            <option value="architect">Architecte</option>
+                            <option value="accountant">Comptable</option>
+                            <option value="banker">Banquier(ère)</option>
+                            <option value="manager">Gestionnaire</option>
+                            <option value="business_owner">Propriétaire d'entreprise</option>
+                            <option value="entrepreneur">Entrepreneur(e)</option>
+                            <option value="civil_servant">Fonctionnaire</option>
+                            <option value="government_employee">Employé(e) du gouvernement</option>
+                            <option value="police_officer">Policier(ère)</option>
+                            <option value="military">Militaire</option>
+                            <option value="security_guard">Agent(e) de sécurité</option>
+                            <option value="computer_scientist">Informaticien(ne)</option>
+                            <option value="software_developer">Développeur(se) informatique</option>
+                            <option value="technician">Technicien(ne)</option>
+                            <option value="electrician">Électricien(ne)</option>
+                            <option value="mechanic">Mécanicien(ne)</option>
+                            <option value="plumber">Plombier(ère)</option>
+                            <option value="carpenter">Charpentier(ère)</option>
+                            <option value="mason">Maçon(ne)</option>
+                            <option value="journalist">Journaliste</option>
+                            <option value="photographer">Photographe</option>
+                            <option value="designer">Designer</option>
+                            <option value="farmer">Agriculteur(trice)</option>
+                            <option value="fisherman">Pêcheur(se)</option>
+                            <option value="livestock_farmer">Éleveur(se)</option>
+                            <option value="driver">Chauffeur(e)</option>
+                            <option value="taxi_driver">Chauffeur(e) de taxi</option>
+                            <option value="truck_driver">Chauffeur(e) de camion</option>
+                            <option value="pilot">Pilote</option>
+                            <option value="chef">Chef(fe) cuisinier(ère)</option>
+                            <option value="cook">Cuisinier(ère)</option>
+                            <option value="baker">Boulanger(ère)</option>
+                            <option value="tailor">Couturier(ère)</option>
+                            <option value="hairdresser">Coiffeur(se)</option>
+                            <option value="salesperson">Vendeur(se)</option>
+                            <option value="trader">Commerçant(e)</option>
+                            <option value="merchant">Marchand(e)</option>
+                            <option value="real_estate_agent">Agent(e) immobilier(ère)</option>
+                            <option value="construction_worker">Ouvrier(ère) du bâtiment</option>
+                            <option value="contractor">Entrepreneur en construction</option>
+                            <option value="religious_worker">Travailleur(se) religieux(se)</option>
+                            <option value="homemaker">Sans profession / Au foyer</option>
+                            <option value="student">Étudiant(e)</option>
+                            <option value="retired">Retraité(e)</option>
+                            <option value="unemployed">Sans emploi</option>
+
+                            <option value="other">Autre</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="guardian_address">Adresse:</label>
+
+                        <textarea
+                            id="guardian_address"
+                            name="guardian_address"
+                            placeholder="Saisissez l'adresse"
+                            rows="3"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_city">Ville:</label>
+
+                        <input
+                            type="text"
+                            id="guardian_city"
+                            name="guardian_city"
+                            placeholder="Saisissez la ville"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian_id_number">
+                            Numéro de pièce d'identité:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guardian_id_number"
+                            name="guardian_id_number"
+                            placeholder="Saisissez le numéro de pièce d'identité">
+                    </div>
+
+                </section>
+            
+                <!--INFORMATION SUR L'ETAT FINANCIAIRE DE L'ELEVE-->
+
+                <section>
+
+                    <h2>Informations financières</h2>
+
+                    <div class="form-group">
+                        <label for="financial_status">
+                            Situation financière:
+                        </label>
+
+                        <select
+                            id="financial_status"
+                            name="financial_status"
+                            required>
+
+                            <option value="">
+                                Sélectionnez la situation financière
+                            </option>
+
+                            <option value="stable">
+                                Situation financière stable
+                            </option>
+
+                            <option value="moderate">
+                                Situation financière moyenne
+                            </option>
+
+                            <option value="difficult">
+                                Situation financière difficile
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment_responsible">
+                            Responsable du paiement:
+                        </label>
+
+                        <select
+                            id="payment_responsible"
+                            name="payment_responsible"
+                            required>
+
+                            <option value="">
+                                Sélectionnez le responsable du paiement
+                            </option>
+
+                            <option value="mother">Mère</option>
+                            <option value="father">Père</option>
+                            <option value="guardian">Personne responsable</option>
+                            <option value="other">Autre</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tuition_fee">
+                            Frais de scolarité:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="tuition_fee"
+                            name="tuition_fee"
+                            placeholder="Montant des frais de scolarité"
+                            min="0"
+                            step="0.01"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class_fee">
+                            Frais de la classe:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="class_fee"
+                            name="class_fee"
+                            placeholder="Montant des frais de la classe"
+                            min="0"
+                            step="0.01"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previous_debt">
+                            Dette antérieure:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="previous_debt"
+                            name="previous_debt"
+                            placeholder="Montant de la dette antérieure"
+                            min="0"
+                            step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year_amount_to_pay">
+                            Montant total à payer pour l'année:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="year_amount_to_pay"
+                            name="year_amount_to_pay"
+                            placeholder="Montant total à payer"
+                            min="0"
+                            step="0.01"
+                            readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount_paid">
+                            Montant déjà payé:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="amount_paid"
+                            name="amount_paid"
+                            placeholder="Montant déjà payé"
+                            min="0"
+                            step="0.01"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="remaining_balance">
+                            Solde restant:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="remaining_balance"
+                            name="remaining_balance"
+                            placeholder="Solde restant"
+                            min="0"
+                            step="0.01"
+                            readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment_method">
+                            Mode de paiement:
+                        </label>
+
+                        <select
+                            id="payment_method"
+                            name="payment_method"
+                            required>
+
+                            <option value="">
+                                Sélectionnez le mode de paiement
+                            </option>
+
+                            <option value="cash">Espèces</option>
+                            <option value="bank_transfer">Virement bancaire</option>
+                            <option value="mobile_money">Paiement mobile</option>
+                            <option value="check">Chèque</option>
+                            <option value="other">Autre</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scholarship">
+                            Bourse scolaire:
+                        </label>
+
+                        <select
+                            id="scholarship"
+                            name="scholarship"
+                            required>
+
+                            <option value="">
+                                L'élève bénéficie-t-il d'une bourse ?
+                            </option>
+
+                            <option value="yes">Oui</option>
+                            <option value="no">Non</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scholarship_percentage">
+                            Pourcentage de la bourse:
+                        </label>
+
+                        <input
+                            type="number"
+                            id="scholarship_percentage"
+                            name="scholarship_percentage"
+                            placeholder="Exemple: 50"
+                            min="0"
+                            max="100"
+                            step="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment_status">
+                            Statut du paiement:
+                        </label>
+
+                        <select
+                            id="payment_status"
+                            name="payment_status"
+                            required>
+
+                            <option value="">
+                                Sélectionnez le statut du paiement
+                            </option>
+
+                            <option value="paid">Payé</option>
+                            <option value="partial">Paiement partiel</option>
+                            <option value="unpaid">Non payé</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="financial_notes">
+                            Notes financières:
+                        </label>
+
+                        <textarea
+                            id="financial_notes"
+                            name="financial_notes"
+                            placeholder="Ajoutez une remarque concernant la situation financière de l'élève"
+                            rows="4"></textarea>
+                    </div>
+  
+                </section>
+
+                <!-- ACTIONS DU FORMULAIRE -->
+                
+                    <div class="form-actions">
+
+                        <button type="submit" class="btn-submit">Enregistrer l'élève</button>
+                        <button type="reset" class="btn-reset">Annuler</button>
+
+                    </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
